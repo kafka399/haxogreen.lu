@@ -1,0 +1,1 @@
+tmp=read.table('stats2.csv',sep=',')

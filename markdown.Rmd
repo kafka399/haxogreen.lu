@@ -1,0 +1,32 @@
+% Dzidorius Martinaitis
+% Data mining and R language
+% \today
+
+Cyber security
+===========================
+- Misuse/Signature Detection
+- Anomaly Detection
+:   Supervised learning
+:   Unsupervised Learning
+- Hybrid Detection
+- Scan Detection
+- Profiling Modules
+
+Supervised learning 
+==========================
+* Rule based
+:   SNORT
+:   Based on inhouse solution, for ex. user profiles
+
+Unsupervised learning
+==========================
+* Clustering based: 
+:   distance based (K-means, random Forest and etc.)
+:   density based
+
+Scan Detection
+============================
+
+Profiling Modules
+===========================
+
