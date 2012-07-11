@@ -1,0 +1,14 @@
+In preparation for Haxogreen hackers summer camp, I was exploring network security world. My motivation was to find how data mining is applicable for network security and intrusion detection. 
+
+Flame virus, ..., ... proved that static, signature based security systems are not able to detect goverment sponsored threats. Nevertheless, signature based defence systems are mainstream today - think of antivirus, intrusion detection systems. When unknown is unknow, data mining comes to mind.   
+
+Misuse/signature based systems 
+[paziureti apie intrusion detection systems wiki, plius daugiau apie SNORT]
+host based - system calls
+network based - packet information
+
+Anomaly detection
+
+Scan detection
+
+
