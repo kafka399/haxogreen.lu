@@ -1,15 +1,21 @@
-In preparation for Haxogreen hackers summer camp, I was exploring network security world. My motivation was to find how data mining is applicable for network security and intrusion detection. 
+In preparation for ["Haxogreen" hackers summer camp](http://www.haxogreen.lu) which takes place in Luxembourg, I was exploring network security world. My motivation was to find out how data mining is applicable to network security and intrusion detection. 
 
 
-Flame virus, ..., ... proved that static, signature based security systems are not able to detect government sponsored threats. Nevertheless, signature based defence systems are mainstream today - think of antivirus, intrusion detection systems. When unknown is unknown, data mining comes to mind.   
+[Flame virus](http://en.wikipedia.org/wiki/Flame_(malware)), [Stuxnet](http://en.wikipedia.org/wiki/Stuxnet), [Duqu](http://en.wikipedia.org/wiki/Duqu) proved that static, signature based security systems are not able to detect very advanced, government sponsored threats. Nevertheless, signature based defense systems are mainstream today - think of antivirus, intrusion detection systems. What do you do when unknown is unknown? Data mining comes to mind as the answer.   
 
 
-Misuse detection/signature detection systems are based on supervised learning. During learning phase, labeled examples of network packets or systems calls are provided, from which algorithm can learn about the threats. It is very efficient and fast way to find know threats. Nevertheless there are some important drawbacks, namely false positives, novel attacks and complication of obtaining initial data for training of the system.    
-False positives happens, when normal network flow or system calls are marked as a threat. For example, an user can fail to provide the correct password for three times in a row or start using the service which is deviation from the standard profile. Novel attack can be define as an attack not seen by the system, meaning that signature or the pattern of such attack is not learned and the system will be penetrated without the knowledge of the administrator. The latter obstacle (training dataset) can be overcome by collecting the data over time or relaying on public data, such as [DARPA Intrusion Detection Data Set](http://www.ll.mit.edu/mission/communications/ist/corpora/ideval/data/index.html).   
+There are following areas where data mining is or can be employed: misuse/signature detection, anomaly detection, scan detection, etc.
+
+
+Misuse/signature detection systems are based on supervised learning. During learning phase, labeled examples of network packets or systems calls are provided, from which algorithm can learn about the threats. It is very efficient and fast way to find know threats. Nevertheless there are some important drawbacks, namely false positives, novel attacks and complication of obtaining initial data for training of the system.    
+The false positives happens, when normal network flow or system calls are marked as a threat. For example, an user can fail to provide the correct password for three times in a row or start using the service which is deviation from the standard profile. Novel attack can be define as an attack not seen by the system, meaning that signature or the pattern of such attack is not learned and the system will be penetrated without the knowledge of the administrator. The latter obstacle (training dataset) can be overcome by collecting the data over time or relaying on public data, such as [DARPA Intrusion Detection Data Set](http://www.ll.mit.edu/mission/communications/ist/corpora/ideval/data/index.html).   
 Although misuse detection can be built on your own data mining techniques, I would suggest well known product like [Snort](http://www.snort.org/) which relays on crowdsourcing. 
  
 
+Anomaly/outlier detection systems looks for deviation from normal or established patterns within given data. In case of network security any threat will be marked as an anomaly. 
 
+
+[![alt text](http://i176.photobucket.com/albums/w180/investuotojas/start_dec_anomalies.png)](http://s176.photobucket.com/albums/w180/investuotojas/?action=view&current=start_dec_anomalies.png)] 
 
 host based - system calls
 network based - packet information
