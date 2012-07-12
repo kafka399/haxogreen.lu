@@ -1,4 +1,4 @@
-In preparation for ["Haxogreen" hackers summer camp](http://www.haxogreen.lu) which takes place in Luxembourg, I was exploring network security world. My motivation was to find out how data mining is applicable to network security and intrusion detection. 
+In preparation for [\"Haxogreen\" hackers summer camp](http://www.haxogreen.lu) which takes place in Luxembourg, I was exploring network security world. My motivation was to find out how data mining is applicable to network security and intrusion detection. 
 
 
 [Flame virus](http://en.wikipedia.org/wiki/Flame_(malware)), [Stuxnet](http://en.wikipedia.org/wiki/Stuxnet), [Duqu](http://en.wikipedia.org/wiki/Duqu) proved that static, signature based security systems are not able to detect very advanced, government sponsored threats. Nevertheless, signature based defense systems are mainstream today - think of antivirus, intrusion detection systems. What do you do when unknown is unknown? Data mining comes to mind as the answer.   
@@ -12,10 +12,13 @@ The false positives happens, when normal network flow or system calls are marked
 Although misuse detection can be built on your own data mining techniques, I would suggest well known product like [Snort](http://www.snort.org/) which relays on crowdsourcing. 
  
 
-Anomaly/outlier detection systems looks for deviation from normal or established patterns within given data. In case of network security any threat will be marked as an anomaly. 
+Anomaly/outlier detection systems looks for deviation from normal or established patterns within given data. In case of network security any threat will be marked as an anomaly. Bellow you can find two features graph, where number of logins are plotted on x axis and number of queries are plotter on y axis. The color indicates the group to which points are assigned - blue ones are normal, red ones - anomalies.     
 
 
 [![alt text](http://i176.photobucket.com/albums/w180/investuotojas/start_dec_anomalies.png)](http://s176.photobucket.com/albums/w180/investuotojas/?action=view&current=start_dec_anomalies.png)] 
+
+
+The strength of anomaly detection system is 
 
 host based - system calls
 network based - packet information
