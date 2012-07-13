@@ -18,7 +18,7 @@ Anomaly/outlier detection systems looks for deviation from normal or established
 [![alt text](http://i176.photobucket.com/albums/w180/investuotojas/start_dec_anomalies.png)](http://s176.photobucket.com/albums/w180/investuotojas/?action=view&current=start_dec_anomalies.png)] 
 
 
-The strength of anomaly detection system is 
+Anomaly detection systems constantly evolves - what was a norm year ago can be an anomaly today. The algorithm compares network flow with historical flow over given period and looks for outliers with are far away. Such dynamic approach allows to detect novel attacks, nevertheless it generates false positive alerts (marks normal flow as suspicious). Moreover, hackers can mimic normal profile, if they know that such system is deployed.    
 
 The first task when implementing anomaly detection (AD) is collection of the data. If AD is going to be network based, there are two possibilities to collect aggregated data from network. Some Cisco products provide aggregated data as [Netflow](http://www.cisco.com/en/US/products/ps6601/products_ios_protocol_group_home.html) protocol. However, you can use [Wireshark or tshark](http://www.wireshark.org) to collect network flow data from the computer. For example:   
 
