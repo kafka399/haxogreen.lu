@@ -3,6 +3,8 @@ tmp=read.table('stats2.csv',sep=',')
 require('xts')
 temp=xts(tmp[,-10],order.by=as.POSIXct(tmp[,10],origin='1970-01-01'))
 
+temp=temp[which(sapply(temp[,1],nchar)<=15),]
+
 #Number of connections made by the same source as the current record in the last 5 seconds
 #Number of connections made to the same destination as the current record in the last 5 seconds
 #Number of different services from the same source as the current record in the last 5 seconds

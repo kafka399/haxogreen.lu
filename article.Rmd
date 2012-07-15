@@ -15,7 +15,7 @@ Although misuse detection can be built on your own data mining techniques, I wou
 Anomaly/outlier detection systems looks for deviation from normal or established patterns within given data. In case of network security any threat will be marked as an anomaly. Below you can find two features graph, where number of logins are plotted on x axis and number of queries are plotter on y axis. The color indicates the group to which points are assigned - blue ones are normal, red ones - anomalies.     
 
 
-[![alt text](http://i176.photobucket.com/albums/w180/investuotojas/start_dec_anomalies.png)](http://s176.photobucket.com/albums/w180/investuotojas/?action=view&current=start_dec_anomalies.png)] 
+[![alt text](http://i176.photobucket.com/albums/w180/investuotojas/start_dec_anomalies.png)](http://s176.photobucket.com/albums/w180/investuotojas/?action=view&current=start_dec_anomalies.png) 
 
 
 Anomaly detection systems constantly evolves - what was a norm year ago can be an anomaly today. The algorithm compares network flow with historical flow over given period and looks for outliers with are far away. Such dynamic approach allows to detect novel attacks, nevertheless it generates false positive alerts (marks normal flow as suspicious). Moreover, hackers can mimic normal profile, if they know that such system is deployed.    
