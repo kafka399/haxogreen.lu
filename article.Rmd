@@ -41,6 +41,28 @@ Once you have enough data for mining process, you need to preprocess aquired dat
 :   Number of flows to the destination IP address using same source port in the last N flows
 
 
+
+Below you can find an example of feature creation in R. The dataset was created by calling tshark script, which is specified above.  
+
+
+> \#load data  
+> tmp=read.csv('stats2.csv',colClasses=c(rep('character',11)),header=F)  
+> \#get rid of everything below min. in timestamp  
+> tmp[,10]=as.integer(as.POSIXct(format(as.POSIXct(as.integer(tmp[,10]),origin='1970-01-01'),'%Y-%m-%d %H:%M:00')))   
+> \#fix some rows  
+> tmp=tmp[-which(sapply(tmp[,1],function(x) nchar(x)>15)),]
+> tmp=tmp[which(!is.na(tmp[,4])),]
+> 
+> \#aggregate date by 5 mins. it assumes, that flow is continuous  
+> factor=as.factor(tmp[1:5000,10])
+> 
+> feature=do.call(rbind,
+>              sapply(seq(from=1,to=length(factor),by=4),function(x){
+>   return(list(ddply(
+>     subset(tmp,factor==levels(factor)[x:(x+4)]),.(V1,V4),summarize,times=length(V11),.parallel=FALSE
+>     )))
+> }))
+
 After preprocessing the data we can apply local outlier detection, KNN, random forest and others algorithms. I will  provide R code and practical implementation of some algorithms in the following post.
 
 

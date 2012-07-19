@@ -1,3 +1,5 @@
+.RData
+.Rhistory
 core
 *.swp
 *.csv
