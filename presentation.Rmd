@@ -1,0 +1,89 @@
+% [@dzidorius (Dzidas)](http://twitter.com/dzidorius)
+% Data mining and R language at [#Haxogreen] (
+% \today
+
+
+What is data mining?
+===
+Discovery of new patterns
+
+* Cluster analysis  
+* Anomaly detection 
+* Rule mining
+* Regression
+* Summarization 
+
+
+What is not data mining?
+====
+* Data management
+* Data preprocessing
+* Transformation
+* Modeling / inference
+* Visualization 
+
+Github example I
+===
+![](http://i176.photobucket.com/albums/w180/investuotojas/actions.png) 
+
+
+Github example II
+=== 
+![](http://i176.photobucket.com/albums/w180/investuotojas/cpp_java.png) 
+
+
+Github example III
+===
+![](http://i176.photobucket.com/albums/w180/investuotojas/fork_watch.png) 
+
+
+Liquidation of big block of stocks
+===
+![](http://i176.photobucket.com/albums/w180/investuotojas/volumeHist.png) 
+
+
+Anomaly detection
+===
+![](http://i176.photobucket.com/albums/w180/investuotojas/start_dec_anomalies.png) 
+
+
+Real estate mining
+===
+![](http://i176.photobucket.com/albums/w180/investuotojas/maps3.png) 
+
+Crime patterns
+===
+![](http://i176.photobucket.com/albums/w180/investuotojas/Picture2.png)
+
+Example of machine learning I 
+===
+![](http://i176.photobucket.com/albums/w180/investuotojas/example.png)
+
+Example of machine learning II
+===
+Positive
+
+
+![](http://i176.photobucket.com/albums/w180/investuotojas/pos.png)
+
+
+Negative
+
+
+![](http://i176.photobucket.com/albums/w180/investuotojas/neg.png)
+
+Data
+====
+* 
+
+
+Examples of data mining
+===
+
+Big data
+====
+
+Who Am I?
+====
+
+
