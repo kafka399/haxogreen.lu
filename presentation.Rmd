@@ -1,5 +1,5 @@
 % [@dzidorius (Dzidas)](http://twitter.com/dzidorius)
-% Data mining and R language at [#Haxogreen] (
+% Data mining and R language 
 % \today
 
 
@@ -23,62 +23,79 @@ What is not data mining?
 * Visualization 
 
 Github example I
-===
-![](http://i176.photobucket.com/albums/w180/investuotojas/actions.png) 
+=
+![](http://i176.photobucket.com/albums/w180/investuotojas/actions.png)\  
 
 
 Github example II
 === 
-![](http://i176.photobucket.com/albums/w180/investuotojas/cpp_java.png) 
+![](http://i176.photobucket.com/albums/w180/investuotojas/cpp_java.png)\  
 
 
 Github example III
 ===
-![](http://i176.photobucket.com/albums/w180/investuotojas/fork_watch.png) 
+![](http://i176.photobucket.com/albums/w180/investuotojas/fork_watch.png)\  
 
 
 Liquidation of big block of stocks
 ===
-![](http://i176.photobucket.com/albums/w180/investuotojas/volumeHist.png) 
+![](http://i176.photobucket.com/albums/w180/investuotojas/volumeHist.png)\ 
 
 
 Anomaly detection
 ===
-![](http://i176.photobucket.com/albums/w180/investuotojas/start_dec_anomalies.png) 
+![](http://i176.photobucket.com/albums/w180/investuotojas/start_dec_anomalies.png)\  
 
 
 Real estate mining
 ===
-![](http://i176.photobucket.com/albums/w180/investuotojas/maps3.png) 
+![](http://i176.photobucket.com/albums/w180/investuotojas/maps3.png)\ 
 
 Crime patterns
 ===
-![](http://i176.photobucket.com/albums/w180/investuotojas/Picture2.png)
+![](http://i176.photobucket.com/albums/w180/investuotojas/Picture2.png)\ 
 
 Example of machine learning I 
 ===
-![](http://i176.photobucket.com/albums/w180/investuotojas/example.png)
+![](http://i176.photobucket.com/albums/w180/investuotojas/example.png)\ 
 
 Example of machine learning II
 ===
 Positive
 
 
-![](http://i176.photobucket.com/albums/w180/investuotojas/pos.png)
+![](http://i176.photobucket.com/albums/w180/investuotojas/pos.png)\ 
 
 
 Negative
 
 
-![](http://i176.photobucket.com/albums/w180/investuotojas/neg.png)
-
-Data
-====
-* 
+![](http://i176.photobucket.com/albums/w180/investuotojas/neg.png)\ 
 
 
-Examples of data mining
+Data sources 
 ===
+Government sites
+:   Data format - .pdf
+:   Lagged data
+:   Infrequent time-frame
+
+
+Research data 
+:   Rare
+:
+
+
+Corporate data
+:   Wikipedia, 
+:   N-grams, Github ([Google BigQuery](https://developers.google.com/bigquery/docs/overview))
+
+
+Data acquisition
+===
+
+* Web scraping
+*  
 
 Big data
 ====
