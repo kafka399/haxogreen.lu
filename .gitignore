@@ -1,3 +1,7 @@
+test*.*
+*.png
+assets
+figure
 .RData
 .Rhistory
 core

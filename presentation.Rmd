@@ -5,37 +5,38 @@
 
 What is data mining?
 ===
-Discovery of new patterns
++ Discovery of new patterns
 
-* Cluster analysis  
-* Anomaly detection 
-* Rule mining
-* Regression
-* Summarization 
+    - Cluster analysis  
+    - Anomaly detection 
+    - Rule mining
+    - Regression
+    - Summarization 
 
 
 What is not data mining?
 ====
-* Data management
-* Data preprocessing
-* Transformation
-* Modeling / inference
-* Visualization 
+
+- Data management
+- Data preprocessing
+- Transformation
+- Modeling / inference
+- Visualization 
 
 What is R language
 ===
-Pros:  
++ Pros  
 
-* Open source
-* Community of millions of users and growing
-* Zillion of packages
-* Supports C++, Java, etc.
-* CLI
+    - Open source
+    - Community of millions of users and growing
+    - Zillion of packages
+    - Supports C++, Java, etc.
+    - CLI
 
-Cons:
++ Cons
 
-* Steep learning curve
-* In-memory
+    - Steep learning curve
+    - In-memory
 
 
 Nearest neighbors
@@ -102,30 +103,30 @@ Negative
 
 Data sources 
 ===
-Government
++ Government
 
-* Data format - .pdf
-* Lagged data
-* Infrequent time-frame
+    - Data format - .pdf
+    - Lagged data
+    - Infrequent time-frame
 
 
 Public datasets
 ===
 
-* [Amazon public dataset](http://aws.amazon.com/datasets?_encoding=UTF8&jiveRedirect=1)
-:   Wikipedia
-:   1000 Genomes
-:   Common Crawl Corpus
-:   Google Books Ngrams
++ [Amazon public dataset](http://aws.amazon.com/datasets?_encoding=UTF8&jiveRedirect=1)
+    - Wikipedia
+    - 1000 Genomes
+    - Common Crawl Corpus
+    - Google Books Ngrams
 
-* [Google BigQuery](https://developers.google.com/bigquery/docs/overview)
-:   GitHub
++ [Google BigQuery](https://developers.google.com/bigquery/docs/overview)
+    - GitHub
 
-* Others
-:   Wikileaks
-:   Twitter
-:   Facebook
-:   Kaggle
++ Others
+    - Wikileaks
+    - Twitter
+    - Facebook
+    - Kaggle
 
 Data acquisition
 ===
@@ -139,14 +140,14 @@ Data acquisition
 Big data 
 ====
 
-* Size matters
-:   I start forgetting things - 5 GB
-:   I need to move a lot of data - 300 GB
-:   I'm stuck - 1 TB
++ Size matters
+    - I start forgetting things - 5 GB
+    - I need to move a lot of data - 300 GB
+    - I'm stuck - 1 TB
 
 
-* Unstructured data - NoSql
-* Real time
++ Unstructured data - NoSql
++ Real time
 
 
 Crunching big data - MapReduce
@@ -160,58 +161,53 @@ You and your 9 best friends are at National library. You are given 1 million of 
 
 Cyber security
 ===========================
-- Misuse/Signature Detection
-- Anomaly Detection
-:   Supervised learning
-:   Unsupervised Learning
-- Hybrid Detection
-- Scan Detection
-- Profiling Modules
++ Misuse/Signature Detection
++ Anomaly Detection
+    - Supervised learning
+    - Unsupervised Learning
++ Hybrid Detection
++ Scan Detection
++ Profiling Modules
 
 Supervised learning
 ==========================
-* Rule based
-:   SNORT
++ Rule based
+    - SNORT
 
 Unsupervised learning
 ==========================
-* Clustering based:
-:   distance based (K-means, random Forest and etc.)
-:   density based
++ Clustering based
+    - distance based (K-means, random Forest and etc.)
+    - density based
 
-* Rule based
-:   based on user profiles
++ Rule based
+    - based on user profiles
 
 Feature selection
 =========================
-* Basic features:
-:   source IP address
-:   source port
-:   destination IP address
-:   destination port
-:   protocol
-:   flags
-:   number of bytes
-:   number of packets
-* Derived features:
-:   time-window
-:   connection window based features
++ Basic features
+    - source IP address
+    - source port
+    - destination IP address
+    - destination port
+    - protocol
+    - flags
+    - number of bytes
+    - number of packets
++ Derived features
+    - time-window
+    - connection window based features
 
 
 Who Am I?
 ====
 
-Dzidorius Martinaitis  
-Java, C++ and R developer & data junkie
+Dzidorius Martinaitis
+ 
+> <font color = "grey">Java, C++ and R developer & data junkie</font>
 
 
-blog:    [investuotojas.eu](http://www.investuotojas.eu)
-
-
-twitter: [@dzidorius](http://www.twitter.com/dzidorius)
-
-
-github:  [kafka399](http://https://github.com/kafka399)
-
-
-linkedin: [dzidorius](http://lu.linkedin.com/in/dzidorius)
++ blog:    [investuotojas.eu](http://www.investuotojas.eu)
++ twitter: [@dzidorius](http://www.twitter.com/dzidorius)
++ github:  [kafka399](http://https://github.com/kafka399)
++ linkedin: [dzidorius](http://lu.linkedin.com/in/dzidorius)
