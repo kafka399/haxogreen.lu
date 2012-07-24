@@ -8,7 +8,6 @@ core
 *.swp
 *.csv
 *.md
-*.html
 *.log
 *.pdf
 *.log
