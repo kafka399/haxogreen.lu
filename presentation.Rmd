@@ -1,7 +1,6 @@
 % [@dzidorius (Dzidas)](http://twitter.com/dzidorius)
-% Data mining and R language 
+% Data mining and intrusion detection 
 % \today
-
 
 What is data mining?
 ===
@@ -12,7 +11,6 @@ What is data mining?
     - Rule mining
     - Regression
     - Summarization 
-
 
 What is not data mining?
 ====
@@ -38,7 +36,6 @@ What is R language
     - Steep learning curve
     - In-memory
 
-
 Nearest neighbors
 ===
 * Matlab
@@ -54,26 +51,17 @@ Github data example I
 =
 ![](http://i176.photobucket.com/albums/w180/investuotojas/actions.png)\  
 
-
 Github data example II
 === 
-![](http://i176.photobucket.com/albums/w180/investuotojas/cpp_java.png)\  
-
+![](http://i176.photobucket.com/albums/w180/investuotojas/cpp_java.png)
 
 Github data example III
 ===
 ![](http://i176.photobucket.com/albums/w180/investuotojas/fork_watch.png)\  
 
-
 Liquidation of big block of stocks
 ===
 ![](http://i176.photobucket.com/albums/w180/investuotojas/volumeHist.png)\ 
-
-
-Anomaly detection
-===
-![](http://i176.photobucket.com/albums/w180/investuotojas/start_dec_anomalies.png)\  
-
 
 Real estate mining
 ===
@@ -108,7 +96,9 @@ Data sources
     - Data format - .pdf
     - Lagged data
     - Infrequent time-frame
-
++ Solutions
+    - Hackathons/datedive
+    - Data liberation movements
 
 Public datasets
 ===
@@ -136,7 +126,6 @@ Data acquisition
 * Mobile phone(s)
 * Honey spot as app., social network user
 
-
 Big data 
 ====
 
@@ -149,7 +138,6 @@ Big data
 + Unstructured data - NoSql
 + Real time
 
-
 Crunching big data - MapReduce
 ===
 
@@ -157,10 +145,37 @@ You and your 9 best friends are at National library. You are given 1 million of 
 
 * Divide randomly the books
 * Separately, find all books matching the criteria and count them
-* Get total answer 
+* Get total answer
 
-Cyber security
-===========================
+Why do you need 9 friends? 
+
+My experience with big data
+===
+
++ Google BigQuery
++ Amazon Aws
+    - Hadoop
+    - Hive
+
+
+Computer security
+======
++ Whats wrong with existing systems
+    - Stunex, Flame, Duqu
+    - Estonia, 2007
+    - Operation Aurora, 2009
+
+Computer security systems
+===
++ Host
+    - Low resources demand from host
+    - Covers one machine
++ Network
+    - High resources demand from server
+    - Covers whole network
+
+Types of network security systems
+===
 + Misuse/Signature Detection
 + Anomaly Detection
     - Supervised learning
@@ -169,10 +184,16 @@ Cyber security
 + Scan Detection
 + Profiling Modules
 
-Supervised learning
+Signature detection & Supervised learning
 ==========================
 + Rule based
     - SNORT
+
+
+Anomaly detection
+===
+![](http://i176.photobucket.com/albums/w180/investuotojas/start_dec_anomalies.png)\  
+
 
 Unsupervised learning
 ==========================
@@ -182,6 +203,15 @@ Unsupervised learning
 
 + Rule based
     - based on user profiles
+
+
+Weakness of unsupervised learning
+====
+
++ False positives
++ Alerts you, but doesn't provide the cause
++ Misbehaviour can be hidden
+
 
 Feature selection
 =========================
@@ -197,6 +227,12 @@ Feature selection
 + Derived features
     - time-window
     - connection window based features
+
+Hybrid systems
+====
+
++ Signature based system
++ Unsupervised learning system 
 
 
 Who Am I?
