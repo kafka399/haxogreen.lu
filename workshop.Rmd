@@ -10,7 +10,7 @@ fork code from
 Prerequisite for R
 ===
 
-    requirements=c('twitteR','tm','wordcloud','RColorBrewer')  
+    requirements=c('twitteR','tm','wordcloud','RColorBrewer','xtable')  
     if(length(requirements[which(!(requirements %in% 
 		installed.packages()[,1]))])>0)  
         install.packages(requirements[which(!(requirements %in% 
