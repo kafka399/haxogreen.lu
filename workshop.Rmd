@@ -1,5 +1,12 @@
-Data mining with R
+Twitter network data mining with R
 ===
+
+[@dzidorius (Dzidas)](http://twitter.com/dzidorius)
+
+
+fork code from  
+[https://github.com/kafka399/haxogreen.lu](https://github.com/kafka399/haxogreen.lu) 
+
 Prerequisite for R
 ===
 
@@ -129,8 +136,21 @@ rez=rez[-which(rez$name=='haxogreen'),]
 ```
 Word cloud 
 ===
-```{r figure=TRUE,fig.cap=''}
+```{r figure=TRUE,fig.cap='',comment=NA, message=FALSE}
 require(RColorBrewer)
 require(wordcloud)
 wordcloud(rez$name,rez$count, min.freq=7,colors=brewer.pal(8,"Dark2"))
 ```
+
+Who Am I?
+====
+
+Dzidorius Martinaitis
+ 
+> <font color = "grey">Java, C++ and R developer & data junkie</font>
+
+
++ blog:    [investuotojas.eu](http://www.investuotojas.eu)
++ twitter: [@dzidorius](http://www.twitter.com/dzidorius)
++ github:  [kafka399](http://https://github.com/kafka399)
++ linkedin: [dzidorius](http://lu.linkedin.com/in/dzidorius)
