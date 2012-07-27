@@ -1,0 +1,136 @@
+Data mining with R
+===
+Prerequisite for R
+===
+
+    requirements=c('twitteR','tm','wordcloud','RColorBrewer')  
+    if(length(requirements[which(!(requirements %in% 
+		installed.packages()[,1]))])>0)  
+        install.packages(requirements[which(!(requirements %in% 
+		installed.packages()[,1]))])
+Get the data
+===
+
+Who is tweeting about #Haxogreen
+
+```{r results=asis,comment=NA, message=FALSE}
+require(twitteR)
+#tweets=twitteR::searchTwitter('#haxogreen',n=2000)
+load('tweets.Rdata')
+names=sapply(tweets,function(x)x$screenName)
+rez=(aggregate(names,list(factor(names)),length))
+rez=rez[order(rez$x),]
+#rownames(rez)=NULL
+colnames(rez)=c('name','count')
+#only for presentation
+options(xtable.type = 'html')
+require(xtable)
+xtable(t(tail(rez,6)))
+```
+
+Plot top10 tweeters
+===
+```{r topspam, figure=TRUE,fig.cap=''}
+barplot(tail(rez$count,10),names.arg=as.character(tail(rez$name,10)),cex.names=.7,las=2)
+```
+
+Who are these people
+===
+```{r results=asis,comment=NA, message=FALSE}
+# users=lookupUsers(as.character(tail(rez,3)$name))
+load('users.Rdata')
+users=lapply(users,function(x){
+  if(any(sapply(as.character(tail(rez,3)$name),function(y){
+    x$screenName==y})))return(x)})
+
+users=users[!sapply(users,is.null)]
+
+for(i in 1:length(users))
+{
+cat(paste("**",users[[i]]$name," @",users[[i]]$screenName,"**", "\n===\n",sep=""))
+cat(paste("![](http://api.twitter.com/1/users/profile_image?screen_name=",users[[i]]$screenName,
+          "&size=normal)",sep=''))
+cat(paste("  \n**Created:** ",users[[i]]$created,
+          "  \n**Spam rate:** ",round(users[[i]]$followersCount/users[[i]]$friendsCount,digits=2),
+          "  \n**Activity:** " , users[[i]]$statusesCount,
+          "  \n**Location:** ", users[[i]]$location,"  \n",users[[i]]$description,"  \n",
+          "**Last status:** ",(users[[i]]$lastStatus$text),"\n\n",sep=""))
+}
+```
+Exploring similarities - code
+===
+
+```{r results=asis,comment=NA, message=FALSE}
+##of line version
+#users=lookupUsers(as.character(tail(rez,10)$name))
+load('users.Rdata')
+
+#friends=sapply(seq(1:10),function(x){(users[[x]]$getFriends())})
+load('friends.Rdata')
+matrix=matrix(nrow=10,ncol=10)
+rez=apply(combn(1:10,2),2,function(x)
+{
+
+matrix[x[1],x[2]]=length(which(sapply(friends[[x[2]]],function(x)x$screenName)%in%sapply(friends[[x[1]]],function(x)x$screenName)))/length(friends[[x[2]]])
+})
+
+rez3=apply(combn(1:10,2),2,function(x)
+{
+
+matrix[x[1],x[2]]=length(which(sapply(friends[[x[1]]],function(x)x$screenName)%in%sapply(friends[[x[2]]],function(x)x$screenName)))/length(friends[[x[1]]])
+})
+
+#rez2=combn(1:10,2)[,which(rez>.2)]
+
+pairs=data.frame(pairs=apply(combn(1:10,2)[,which(rez>.4)],2,function(x){paste(users[[x[1]]]$name,'~',users[[x[2]]]$name)}),rate=rez[which(rez>.4)])
+
+pairs=rbind(pairs,data.frame(pairs=apply(combn(1:10,2)[,which(rez3>.4)],2,function(x){paste(users[[x[1]]]$name,'~',users[[x[2]]]$name)}),rate=rez3[which(rez3>.4)]))
+```
+Exploring similarities
+===
+```{r results=asis,comment=NA, message=FALSE}
+xtable(pairs[order(pairs$rate),])
+```
+Exploring dissimilarities - code
+===
+
+```{r results=asis,comment=NA, message=FALSE}
+pairs=data.frame(pairs=apply(combn(1:10,2)[,which(rez<.007)],2,function(x){paste(users[[x[1]]]$name,'~',users[[x[2]]]$name)}),rate=rez[which(rez<.007)])
+
+pairs=rbind(pairs,data.frame(pairs=apply(combn(1:10,2)[,which(rez3<.007)],2,function(x){paste(users[[x[1]]]$name,'~',users[[x[2]]]$name)}),rate=rez3[which(rez3<.007)]))
+
+```
+Exploring dissimilarities
+===
+```{r results=asis,comment=NA, message=FALSE}
+xtable(pairs[order(pairs$rate),])
+```
+
+Word cloud - code
+====
+
+```{r results=asis,comment=NA, message=FALSE}
+#tweets=twitteR::searchTwitter('#haxogreen',n=2000)
+load('tweets.Rdata')
+tweets=sapply(tweets,function(x)x$text)
+tweets=tweets[which(!unlist(sapply(seq(2:length(tweets)),function(x){tweets[x]==tweets[x-1]})))+1]
+require('tm')
+corpus=Corpus(VectorSource(tweets),readerControl=list(language='en'))
+corpus=tm_map(corpus,tolower)
+corpus=tm_map(corpus,removePunctuation)
+corpus=tm_map(corpus,removeWords,c(stopwords('english'),'rt'))
+
+corpus.matrix=TermDocumentMatrix(corpus)
+corpus=removeSparseTerms(corpus.matrix,0.75)
+
+rez=sort(rowSums(as.matrix(corpus.matrix)))
+rez=data.frame(name=names(rez),count=as.numeric(rez))
+rez=rez[-which(rez$name=='haxogreen'),]
+```
+Word cloud 
+===
+```{r figure=TRUE,fig.cap=''}
+require(RColorBrewer)
+require(wordcloud)
+wordcloud(rez$name,rez$count, min.freq=7,colors=brewer.pal(8,"Dark2"))
+```
