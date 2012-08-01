@@ -8,7 +8,6 @@ figure
 core
 *.swp
 *.csv
-*.md
 *.log
 *.pdf
 *.log

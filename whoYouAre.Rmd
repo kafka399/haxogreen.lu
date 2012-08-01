@@ -1,0 +1,23 @@
+Who tweeted about #Haxogreen
+========================================================
+
+
+```{r comment=NA,echo=FALSE,message=FALSE,results='asis'}
+require(twitteR)
+tweets=twitteR::searchTwitter('#haxogreen',n=2000)
+names=sapply(tweets,function(x)x$screenName)
+rez=(aggregate(names,list(factor(names)),length))
+users=lookupUsers(as.character(rez[,1]))
+for(i in 1:length(users))
+{
+cat(paste("**",users[[i]]$name," @",users[[i]]$screenName,"**", "\n===\n",sep=""))
+cat(paste("![](http://api.twitter.com/1/users/profile_image?screen_name=",users[[i]]$screenName,
+          "&size=normal)",sep=''))
+cat(paste("  \n**Created:** ",users[[i]]$created,
+          "  \n**Spam rate:** ",round(users[[i]]$followersCount/users[[i]]$friendsCount,digits=2),
+          "  \n**Activity:** " , users[[i]]$statusesCount,
+          "  \n**Location:** ", users[[i]]$location,"  \n",users[[i]]$description,"  \n",
+          "**Last status:** ",(users[[i]]$lastStatus$text),"\n\n",sep=""))
+}
+```
+
