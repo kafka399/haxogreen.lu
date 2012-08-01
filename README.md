@@ -1,7 +1,7 @@
-The project contains R and Markdown files of presentation and workshop which were used in [haxogreen][hack] hackers summer camp.
-    [Prensentation][pres], source [file][src_pres]
+The project contains R and Markdown files of presentation and workshop which were used in [haxogreen][hack] hackers summer camp.  
 
-    [Workshop][work], source [file][src_work]
++ [Prensentation][pres], source [file][src_pres]  
++ [Workshop][work], source [file][src_work]  
 
 More information about R and Markdown you can find in my blog [post][post]
 
